@@ -70,9 +70,8 @@ A detailed presentation of the project, including goals and outcomes, can be fou
 
 ## Installation
 ### Prerequisites
-- Node.js
-- Java (if applicable)
-- Any other software or libraries required for your project.
+- Java
+- Spring Boot
 
 ### Steps
 1. Clone the repository: `git clone <repository-url>`

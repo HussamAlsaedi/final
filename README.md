@@ -47,7 +47,7 @@ IdeaSphere is a dedicated platform that empowers individuals to showcase their c
 
 ## Summary
 
-- **Total Endpoints**: 28
+- **Total Endpoints**: 30
 - **Controllers**: 7
 
 ---
@@ -98,6 +98,15 @@ IdeaSphere is a dedicated platform that empowers individuals to showcase their c
 
 ---
 
-**Grand Total (API Endpoints)**: 28
-- **Total Endpoints**: 28
+### SchedulerService
+
+1. **Automatically scheduled task**: `checkLatePaymentCompetition` - Check and update competitions with late payments.
+2. **Automatically scheduled task**: `assignMonthlyWinner` - Assign the winner for the monthly draw based on predefined criteria.
+
+**Total**: 2 tasks (automated, not API endpoints)
+
+---
+
+**Grand Total (API Endpoints)**: 30
+- **Total Endpoints**: 30
 - **Controllers**: 7

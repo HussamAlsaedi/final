@@ -29,7 +29,6 @@ The application exposes the following endpoints for interacting with the server:
 - **Create Competition**: `POST /competitions`
 - **Read Competition**: `GET /competitions/{id}`
 - **Update Competition**: `PUT /competitions/{id}`
-- **Delete Competition**: `DELETE /competitions/{id}`
 - **Extend Competition**: `POST /individual-competition/extend-competition`
 - **Cancel Competition**: `DELETE /individual-competition/cancel-competition/{id}`
 
@@ -37,13 +36,11 @@ The application exposes the following endpoints for interacting with the server:
 - **Create Organizer**: `POST /organizers`
 - **Read Organizer**: `GET /organizers/{id}`
 - **Update Organizer**: `PUT /organizers/{id}`
-- **Delete Organizer**: `DELETE /organizers/{id}`
 
 ### 3. **Monthly Draw CRUD**
 - **Create Monthly Draw**: `POST /monthly-draws`
 - **Read Monthly Draw**: `GET /monthly-draws/{id}`
 - **Update Monthly Draw**: `PUT /monthly-draws/{id}`
-- **Delete Monthly Draw**: `DELETE /monthly-draws/{id}`
 - **Get All Monthly Draws**: `GET /monthlyDraw/get-all-monthly-draws`
 - **Get Eligible Monthly Draws**: `GET /monthlyDraw/eligible`
 - **Find Draws by Prize or Name**: `GET /monthlyDraw/findDrawsByPrizeOrName/{prize}/{name}`
@@ -54,7 +51,6 @@ The application exposes the following endpoints for interacting with the server:
 - **Create Participant**: `POST /monthly-draw-participants`
 - **Read Participant**: `GET /monthly-draw-participants/{id}`
 - **Update Participant**: `PUT /monthly-draw-participants/{id}`
-- **Delete Participant**: `DELETE /monthly-draw-participants/{id}`
 - **Get All Monthly Draw Participants**: `GET /monthly-draw-participants`
 
 You can find detailed documentation for the API in the link below:

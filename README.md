@@ -11,6 +11,8 @@ Features:
 •    Voting System: Provides a fair and clear way to determine winners through public votes or organizer selection.
 •    Notifications: Keeps users informed with updates on deadlines, announcements, and competition results.
 •    Diverse Categories: Supports a wide range of competition types to suit different skills and interests.
+
+
 المقدمة:
 فضاء الحلول هي منصة مخصصة تتيح للأفراد استعراض إبداعاتهم وابتكاراتهم من خلال تنظيم والمشاركة في مسابقات في مختلف المجالات.
 

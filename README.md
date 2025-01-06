@@ -43,7 +43,6 @@ The application exposes the following endpoints for interacting with the server:
 - **Update Monthly Draw**: `PUT /monthly-draws/{id}`
 - **Get All Monthly Draws**: `GET /monthlyDraw/get-all-monthly-draws`
 - **Get Eligible Monthly Draws**: `GET /monthlyDraw/eligible`
-- **Find Draws by Prize or Name**: `GET /monthlyDraw/findDrawsByPrizeOrName/{prize}/{name}`
 - **Find Draws by Prize or Name (Gift Card)**: `GET /monthlyDraw/findDrawsByPrizeOrName/Gift Card`
 - **Find Draws by Prize or Name (Lucky Draw)**: `GET /monthlyDraw/findDrawsByPrizeOrName/Lucky Drawd`
 

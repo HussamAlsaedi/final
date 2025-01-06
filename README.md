@@ -1,76 +1,73 @@
+# IdeaSphere API Documentation
 
+**System Description**
 
-# Project Name: IdeaSphere
+- IdeaSphere is a dedicated platform that empowers individuals to showcase their creativity and innovation through organizing and participating in competitions across various fields.
+- فضاء الحلول هو منصة مخصصة تمكن الأفراد من عرض إبداعاتهم وابتكاراتهم من خلال تنظيم والمشاركة في مسابقات في مختلف المجالات.
 
-## Overview
-IdeaSphere System Description
-IdeaSphere is a dedicated platform that empowers individuals to showcase their creativity and innovation through organizing and participating in competitions across various fields.
-Features:
-•    Competition Creation: Enables organizers to create and manage competitions designed to meet their goals and requirements.
-•    Submission Management: Allows participants to submit their work easily, and organizers to review and evaluate entries.
-•    Voting System: Provides a fair and clear way to determine winners through public votes or organizer selection.
-•    Notifications: Keeps users informed with updates on deadlines, announcements, and competition results.
-•    Diverse Categories: Supports a wide range of competition types to suit different skills and interests.
+## Summary
 
+- **Total Endpoints**: 43
+- **Controllers**: 8
 
-المقدمة:
-فضاء الحلول هي منصة مخصصة تتيح للأفراد استعراض إبداعاتهم وابتكاراتهم من خلال تنظيم والمشاركة في مسابقات في مختلف المجالات.
+---
 
-الميزات:
+## Endpoints by Controller
 
-إنشاء المسابقات: تتيح للمنظمين والافراد إنشاء وإدارة مسابقات مصممة لتتناسب مع أهدافهم واحتياجاتهم.
-إدارة المشاركات: يمكن للمشاركين تقديم أعمالهم بسهولة، وللمنظمين مراجعة وتقييم المشاركات.
-نظام التصويت: يوفر طريقة عادلة وواضحة لتحديد الفائزين من خلال تصويت الجمهور أو اختيار المنظم.
-الإشعارات: تبقي المستخدمين على اطلاع بآخر التحديثات والمواعيد النهائية وإعلانات النتائج.
-فئات متنوعة: تدعم مجموعة واسعة من أنواع المسابقات لتلبي مختلف المهارات والاهتمامات.
-## Endpoints
+### IndividualCompetitionController
 
-The application exposes the following endpoints for interacting with the server:
+1. **GET** `/competitions` - Get all individual competitions.
+2. **POST** `/competitions` - Create a new individual competition.
+3. **GET** `/competitions/{id}` - Get individual competition details by ID.
+4. **PUT** `/competitions/{id}` - Update competition details.
+5. **DELETE** `/competitions/{id}` - Delete an individual competition.
+6. **POST** `/individual-competition/extend-competition` - Extend the competition dates and participant numbers.
+7. **DELETE** `/individual-competition/cancel-competition/{id}` - Cancel an individual competition.
 
-### 1. **Individual Competition CRUD**
-- **Create Competition**: `POST /competitions`
-- **Read Competition**: `GET /competitions/{id}`
-- **Update Competition**: `PUT /competitions/{id}`
-- **Extend Competition**: `POST /individual-competition/extend-competition`
-- **Cancel Competition**: `DELETE /individual-competition/cancel-competition/{id}`
+**Total**: 7 endpoints
 
-### 2. **Individual Organizer CRUD**
-- **Create Organizer**: `POST /organizers`
-- **Read Organizer**: `GET /organizers/{id}`
-- **Update Organizer**: `PUT /organizers/{id}`
+### IndividualOrganizerController
 
-### 3. **Monthly Draw CRUD**
-- **Create Monthly Draw**: `POST /monthly-draws`
-- **Read Monthly Draw**: `GET /monthly-draws/{id}`
-- **Update Monthly Draw**: `PUT /monthly-draws/{id}`
-- **Get All Monthly Draws**: `GET /monthlyDraw/get-all-monthly-draws`
-- **Get Eligible Monthly Draws**: `GET /monthlyDraw/eligible`
-- **Find Draws by Prize or Name (Gift Card)**: `GET /monthlyDraw/findDrawsByPrizeOrName/Gift Card`
-- **Find Draws by Prize or Name (Lucky Draw)**: `GET /monthlyDraw/findDrawsByPrizeOrName/Lucky Drawd`
+1. **GET** `/organizers` - Get all individual organizers.
+2. **POST** `/organizers` - Create a new organizer.
+3. **GET** `/organizers/{id}` - Get organizer details by ID.
+4. **PUT** `/organizers/{id}` - Update organizer details.
+5. **DELETE** `/organizers/{id}` - Delete an individual organizer.
+6. **POST** `/individual-organizer/send-inquiry` - Send an inquiry to the support team with a subject and message body.
+   - **Parameters**:
+     - `subject`: The subject of the inquiry (e.g., "sign up page not working").
+     - `text`: The body of the inquiry (e.g., "sign up page not working, please fix it as soon as possible").
+   - **Example URL**: `POST http://localhost:8080/api/v1/individual-organizer/send-inquiry?subject=sign up page not working&text=sign up page not working, please fix it as soon as possible`
 
-### 4. **Monthly Draw Participant CRUD**
-- **Create Participant**: `POST /monthly-draw-participants`
-- **Read Participant**: `GET /monthly-draw-participants/{id}`
-- **Update Participant**: `PUT /monthly-draw-participants/{id}`
-- **Get All Monthly Draw Participants**: `GET /monthly-draw-participants`
+**Total**: 6 endpoints
 
-You can find detailed documentation for the API in the link below:
+### MonthlyDrawController
 
-- [Postman API Documentation](https://documenter.getpostman.com/view/39709949/2sAYJAcwWX)
+1. **GET** `/monthlyDraw/get-all-monthly-draws` - Get all monthly draws.
+2. **GET** `/monthlyDraw/eligible` - Get eligible monthly draws.
+3. **GET** `/monthlyDraw/findDrawsByPrizeOrName/{prize}/{name}` - Find monthly draws by prize or name.
+4. **GET** `/monthlyDraw/findDrawsByPrizeOrName/Gift Card` - Find monthly draws for "Gift Card".
+5. **GET** `/monthlyDraw/findDrawsByPrizeOrName/Lucky Drawd` - Find monthly draws for "Lucky Draw".
 
-## User Interface
-The project’s user interface is designed with a focus on simplicity and usability. You can explore the design on Figma:
+**Total**: 5 endpoints
 
-- [Figma Design Prototype](https://www.figma.com/proto/oUBCUch383eDZlzbEHI1jv/IdeaSphere?node-id=61-497&p=f&t=1zzA4JYAwr813AdI-1&scaling=contain&content-scaling=fixed&page-id=0%3A1)
+### MonthlyDrawParticipantController
 
-## Presentation
-A detailed presentation of the project, including goals and outcomes, can be found at the following link:
+1. **POST** `/monthly-draw-participants` - Create a new participant for monthly draw.
+2. **GET** `/monthly-draw-participants/{id}` - Get participant details by ID.
+3. **PUT** `/monthly-draw-participants/{id}` - Update participant details.
+4. **DELETE** `/monthly-draw-participants/{id}` - Delete a monthly draw participant.
+5. **GET** `/monthly-draw-participants` - Get all monthly draw participants.
 
-- [Canva Presentation](https://www.canva.com/design/DAGbau1CiMA/fg470odHkUVnt0vgD1Unmg/edit?utm_content=DAGbau1CiMA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+**Total**: 5 endpoints
 
-## Installation
-### Prerequisites
-- Java
-- Spring Boot
+### SchedulerService
 
+1. **Automatically scheduled task**: `checkLatePaymentCompetition` - Check and update competitions with late payments.
+2. **Automatically scheduled task**: `assignMonthlyWinner` - Assign the winner for the monthly draw based on predefined criteria.
 
+**Total**: 2 tasks (automated, not API endpoints)
+
+---
+
+**Grand Total (API Endpoints)**: 43

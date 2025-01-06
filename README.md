@@ -73,14 +73,4 @@ A detailed presentation of the project, including goals and outcomes, can be fou
 - Java
 - Spring Boot
 
-### Steps
-1. Clone the repository: `git clone <repository-url>`
-2. Navigate to the project directory.
-3. Install the required dependencies: `npm install` or equivalent.
-4. Start the application: `npm start` or equivalent.
 
-## Contributing
-If you would like to contribute to this project, please fork the repository and submit a pull request with your proposed changes.
-
-## License
-Include licensing information if applicable.
